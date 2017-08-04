@@ -104,7 +104,7 @@ vector<errors> calcSequenceErrors (vector<Matrix> &poses_gt,vector<Matrix> &pose
         float num_frames = (float)(current_frame-reference_frame+1);
         float speed = distance/(0.1*num_frames);
 
-        err.push_back(errors(current_frame,reference_frame,r_err,t_err,distance,speed));
+        err.push_back(errors(current_frame,reference_frame,r_err/distance,t_err/distance,distance,speed));
 
     }
 
